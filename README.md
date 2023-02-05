@@ -41,7 +41,7 @@ This is a solution to the [Multi-step form](https://www.frontendmentor.io/challe
 
 <h2 align="center">Links</h2>
 
-- Solution URL: [Multi-step form (HTML + SCSS Module + React + TypeScript + React Context API + React Hook Form + ZOD + React Router + Local Storage) | Frontend Mentor](https://www.frontendmentor.io/solutions/product-preview-card-component-html-sass-4rnsVFnqyx)
+- Solution URL: [Multi-step form (HTML + SCSS Module + React + TypeScript + React Context API + React Hook Form + ZOD + React Router + Local Storage) | Frontend Mentor](https://www.frontendmentor.io/solutions/multistep-form-react-scss-module-typescript-context-api-zod-UtBKdPcsgF)
 - Live Site URL: [https://multi-step-form-596299.netlify.app/](https://multi-step-form-596299.netlify.app/)
 
 <br>
