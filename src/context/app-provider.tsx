@@ -27,7 +27,7 @@ const getInitialState = () => {
 
   if (lsData) {
     const { success: isValidBillingType } = billingTypeSchema.safeParse(
-      lsData.selectedPlan
+      lsData.selectedBillingType
     );
     const { success: isValidForm } = formSchema.safeParse(lsData.form);
     const { success: isValidPlan } = planSchema.safeParse(lsData.selectedPlan);
