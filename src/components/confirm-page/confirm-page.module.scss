@@ -1,0 +1,45 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.selected_features {
+  display: grid;
+  gap: rem(12px);
+
+  padding: rem(16px);
+  border-radius: 8px;
+  background-color: hsl($clr-alabaster);
+  margin-bottom: rem(24px);
+
+  @include breakpoint($md) {
+    gap: rem(16px);
+    padding: rem(16px) rem(24px) rem(19px);
+  }
+}
+
+.total_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: rem(16px);
+
+  @include breakpoint($md) {
+    padding-inline: rem(24px);
+    margin-bottom: rem(128px);
+  }
+}
+
+.total_label {
+  font-size: rem(14px);
+  line-height: rem(20px);
+}
+
+.total {
+  color: hsl($clr-purplish-blue);
+  font-weight: $fw-bold;
+  line-height: rem(20px);
+
+  @include breakpoint($md) {
+    font-size: rem(20px);
+  }
+}

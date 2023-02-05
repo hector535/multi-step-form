@@ -1,0 +1,56 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.button {
+  border: 0;
+  background-color: transparent;
+
+  user-select: none;
+
+  padding: rem(12px) rem(16px);
+  width: rem(97px);
+  color: $clr-white;
+  border-radius: 4px;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @include font-wsl($fw-medium, rem(14px), rem(16px));
+
+  @include breakpoint($md) {
+    border-radius: 8px;
+    width: rem(123px);
+    padding: rem(14px) rem(24px) rem(16px);
+    @include font-wsl($fw-medium, rem(16px), rem(18px));
+  }
+}
+
+.primary {
+  background-color: hsl($clr-marine-blue);
+
+  &:hover {
+    background-color: hsl($clr-light-marine-blue);
+    @include transition(background-color);
+  }
+}
+
+.secondary {
+  background-color: hsl($clr-purplish-blue);
+
+  &:hover {
+    background-color: hsl($clr-light-purplish-blue);
+    @include transition(background-color);
+  }
+}
+
+.link {
+  width: unset;
+  padding: unset;
+  color: hsl($clr-cool-gray);
+
+  &:hover {
+    @include transition(color);
+    color: hsl($clr-marine-blue);
+  }
+}

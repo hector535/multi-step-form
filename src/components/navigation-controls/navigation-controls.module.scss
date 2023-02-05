@@ -1,0 +1,32 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.navigation_controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: rem(16px);
+  background-color: $clr-white;
+  box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include breakpoint($md) {
+    position: unset;
+    bottom: unset;
+    left: unset;
+    width: unset;
+
+    padding: unset;
+    background-color: unset;
+    box-shadow: unset;
+  }
+}
+
+.navigation_controls--separate {
+  justify-content: space-between;
+}

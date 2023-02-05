@@ -1,0 +1,23 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.app {
+  @include breakpoint($md) {
+    width: rem(720px);
+    padding: rem(16px);
+    background-color: $clr-white;
+    box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: rem(200px) 1fr;
+    gap: rem(24px);
+  }
+
+  @include breakpoint($xxl) {
+    width: rem(940px);
+    grid-template-columns: rem(274px) 1fr;
+    gap: rem(100px);
+  }
+}

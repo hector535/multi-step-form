@@ -1,0 +1,72 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.step {
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover .number:not(.number--active) {
+    border: 0;
+    background-color: hsl(206, 94%, 87%, 0.5);
+    color: hsl(213, 96%, 18%, 0.5);
+
+    @include transition(border);
+    @include transition(background-color);
+    @include transition(color);
+  }
+
+  @include breakpoint($md) {
+    display: flex;
+    gap: rem(16px);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.number {
+  width: rem(33px);
+  height: rem(33px);
+  border: 1px solid #fff;
+  border-radius: 100vmax;
+  color: $clr-white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+
+  @include font-wsl($fw-bold, rem(14px), rem(16px));
+}
+
+.number--active {
+  background-color: hsl($clr-light-blue);
+  border: 0;
+  color: hsl($clr-marine-blue);
+}
+
+.content {
+  display: none;
+
+  @include breakpoint($md) {
+    display: block;
+  }
+}
+
+.group {
+  @include breakpoint($md) {
+    color: hsl($clr-pastel-blue);
+    margin-bottom: rem(4px);
+    text-transform: uppercase;
+    @include font-wsl($fw-regular, rem(12px), rem(14px));
+  }
+}
+
+.title {
+  @include breakpoint($md) {
+    color: $clr-white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font-wsl($fw-bold, rem(14px), rem(16px));
+  }
+}

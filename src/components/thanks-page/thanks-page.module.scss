@@ -1,0 +1,36 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.thanks_page {
+  padding: rem(79px) rem(24px);
+  text-align: center;
+  display: grid;
+  justify-items: center;
+
+  @include breakpoint($md) {
+    padding: unset;
+    padding-block: rem(165px);
+    padding-right: rem(8px);
+  }
+
+  @include breakpoint($xxl) {
+    padding-right: rem(85px);
+  }
+}
+
+.icon {
+  width: 56px;
+  margin-bottom: rem(24px);
+
+  @include breakpoint($md) {
+    width: 80px;
+    margin-bottom: rem(32px);
+  }
+}
+
+.title--margin {
+  @include breakpoint($md) {
+    margin-bottom: rem(14px);
+  }
+}

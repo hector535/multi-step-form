@@ -1,0 +1,13 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.addons_container {
+  display: grid;
+  gap: rem(12px);
+
+  @include breakpoint($md) {
+    gap: rem(16px);
+    margin-bottom: rem(81px);
+  }
+}

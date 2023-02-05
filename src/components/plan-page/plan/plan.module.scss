@@ -1,0 +1,51 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.plan {
+  border: 1px solid hsl($clr-light-gray);
+  border-radius: 8px;
+  padding: rem(14px) rem(16px);
+
+  display: flex;
+  gap: rem(14px);
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @include breakpoint($md) {
+    display: grid;
+    gap: rem(39px);
+    padding: rem(20px) rem(16px) rem(18px);
+  }
+
+  &:hover {
+    @include transition(border-color);
+    border-color: hsl($clr-purplish-blue);
+  }
+}
+
+.content {
+  display: grid;
+  gap: rem(7px);
+}
+
+.title {
+  color: hsl($clr-marine-blue);
+  text-transform: capitalize;
+  @include font-wsl($fw-medium, rem(16px), rem(18px));
+}
+
+.price {
+  font-size: rem(14px);
+  line-height: rem(20px);
+
+  @include breakpoint($md) {
+    line-height: rem(16px);
+  }
+}
+
+.discount {
+  color: hsl($clr-marine-blue);
+  @include font-wsl($fw-regular, rem(12px), rem(14px));
+}

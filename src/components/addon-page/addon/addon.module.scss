@@ -1,0 +1,59 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.addon {
+  padding: rem(12px) rem(16px);
+  border: 1px solid hsl($clr-light-gray);
+  border-radius: 8px;
+
+  display: grid;
+  gap: rem(16px);
+  grid-template-columns: auto 2fr auto;
+  align-items: center;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @include breakpoint($md) {
+    gap: rem(24px);
+    padding: rem(17px) rem(24px);
+  }
+}
+
+.addon:is(:hover) {
+  border-color: hsl($clr-purplish-blue);
+  @include transition(border-color);
+}
+
+.content {
+  display: grid;
+  gap: rem(3px);
+
+  @include breakpoint($md) {
+    gap: rem(7px);
+  }
+}
+
+.title {
+  color: hsl($clr-marine-blue);
+  @include font-wsl($fw-medium, rem(14px), rem(16px));
+
+  @include breakpoint($md) {
+    @include font-wsl($fw-medium, rem(16px), rem(18px));
+  }
+}
+
+.description,
+.price {
+  font-size: rem(12px);
+  line-height: rem(20px);
+
+  @include breakpoint($md) {
+    font-size: rem(14px);
+  }
+}
+
+.price {
+  color: hsl($clr-purplish-blue);
+}

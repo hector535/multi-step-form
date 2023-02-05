@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+  font-family: $ff-ubuntu;
+  color: hsl($clr-cool-gray);
+  background-color: hsl($clr-magnolia);
+  padding-inline: rem(16px);
+
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
+  @include breakpoint($md) {
+    padding-inline: unset;
+  }
+
+  @include font-wsl($fw-regular, rem(16px), rem(25px));
+}
+
+.title {
+  margin-bottom: rem(9px);
+  color: hsl($clr-marine-blue);
+
+  @include font-wsl($fw-bold, rem(24px), rem(28px));
+
+  @include breakpoint($md) {
+    margin-bottom: rem(11px);
+    @include font-wsl($fw-bold, rem(32px), rem(37px));
+  }
+}
+
+.description {
+  margin-bottom: rem(22px);
+
+  @include breakpoint($md) {
+    margin-bottom: rem(35px);
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.is-selected {
+  border-color: hsl($clr-purplish-blue);
+  background: hsl($clr-alabaster);
+}

@@ -1,0 +1,47 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.selected_plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: rem(12px);
+  border-bottom: 1px solid hsl(231, 11%, 63%, 0.2);
+
+  @include breakpoint($md) {
+    padding-bottom: rem(24px);
+  }
+}
+
+.name {
+  text-transform: capitalize;
+  color: hsl($clr-marine-blue);
+  @include font-wsl($fw-medium, rem(14px), rem(16px));
+
+  @include breakpoint($md) {
+    margin-bottom: rem(7px);
+    @include font-wsl($fw-medium, rem(16px), rem(18px));
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: hsl($clr-cool-gray);
+  @include font-wsl($fw-regular, rem(14px), rem(20px));
+
+  &:hover {
+    color: hsl($clr-purplish-blue);
+    @include transition(color);
+  }
+}
+
+.price {
+  color: hsl($clr-marine-blue);
+  @include font-wsl($fw-bold, rem(14px), rem(20px));
+
+  @include breakpoint($md) {
+    font-size: rem(16px);
+  }
+}

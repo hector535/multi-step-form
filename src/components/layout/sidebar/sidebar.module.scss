@@ -1,0 +1,36 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(172px);
+  background-image: url("/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: rem(32px);
+
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint($md) {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    display: unset;
+    justify-content: unset;
+
+    border-radius: 10px;
+    padding: rem(40px) rem(16px);
+    background-image: url("/bg-sidebar-desktop.svg");
+  }
+
+  @include breakpoint($xxl) {
+    padding: rem(40px) rem(32px);
+  }
+}

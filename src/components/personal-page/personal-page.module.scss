@@ -1,0 +1,13 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.form {
+  display: grid;
+  gap: rem(16px);
+
+  @include breakpoint($md) {
+    gap: rem(24px);
+    margin-bottom: rem(92px);
+  }
+}

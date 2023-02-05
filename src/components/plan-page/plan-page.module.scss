@@ -1,0 +1,37 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.plans_container {
+  display: grid;
+  gap: rem(12px);
+  margin-bottom: rem(16px);
+
+  @include breakpoint($md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(18px);
+    margin-bottom: rem(32px);
+  }
+}
+
+.billing_type_container {
+  background-color: hsl($clr-alabaster);
+  border-radius: 8px;
+  padding: rem(14px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(24px);
+
+  @include breakpoint($md) {
+    padding: rem(13px) rem(14px) rem(14px);
+    margin-bottom: rem(116px);
+  }
+}
+
+.billing_label {
+  @include breakpoint($md) {
+    @include font-wsl($fw-bold, rem(14px), rem(16px));
+  }
+}

@@ -1,0 +1,19 @@
+@use "/styles/abstracts/variables" as *;
+@use "/styles/abstracts/mixins" as *;
+@use "/styles/abstracts/functions" as *;
+
+.selected_feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price,
+.description {
+  font-size: rem(14px);
+  line-height: rem(20px);
+}
+
+.price {
+  color: hsl($clr-marine-blue);
+}
